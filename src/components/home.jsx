@@ -1,11 +1,15 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
-const Home = (props) => (
-      <>
+function Home () {
+    let navigate = useNavigate(); 
+     
+      return (
+          <div>
           <h1>HOME</h1>
-          <button>go to Profile</button>
-      </>
-           
-    );
+          <button onClick={() => {navigate("/profile") }}> go to Profile </button> 
+          </div>    
+      )       
+    };
 
 export default Home;
